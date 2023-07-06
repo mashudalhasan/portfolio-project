@@ -1,6 +1,29 @@
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_swxp80o",
+        "template_d0xcr14",
+        form.current,
+        "MkVHKhqF5hurIn_HQ"
+      )
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="mt-20" id="contact">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -81,55 +104,58 @@ const Contact = () => {
           </div>
 
           <div className="rounded-3xl bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-            <form action="" className="space-y-4">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
-                <label className="sr-only" htmlFor="name">
+                <label className="sr-only">
                   Name
                 </label>
                 <input
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Name"
+                  placeholder="Name*"
                   type="text"
-                  id="name"
+                  name="from_name"
+                  required
                 />
               </div>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="sr-only" htmlFor="email">
+                  <label className="sr-only">
                     Email
                   </label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    placeholder="Email address"
+                    placeholder="Email address*"
                     type="email"
-                    id="email"
+                    name="from_email"
+                    required
                   />
                 </div>
 
                 <div>
-                  <label className="sr-only" htmlFor="phone">
+                  <label className="sr-only">
                     Phone
                   </label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                     placeholder="Phone Number"
                     type="tel"
-                    id="phone"
+                    name="from_phone"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="sr-only" htmlFor="message">
+                <label className="sr-only">
                   Message
                 </label>
 
                 <textarea
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Message"
+                  placeholder="Message*"
                   rows="8"
-                  id="message"
+                  name="message"
+                  required
                 ></textarea>
               </div>
 

@@ -87,7 +87,7 @@ const Home = () => {
                 <span>
                   User <br />
                 </span>
-                <span className="border-2 rounded-full transform transition-transform duration-500 hover:rotate-12">
+                <span className="border-2 rounded-full transform transition-transform duration-500 ease-in-out hover:px-4">
                   Interfaces
                 </span>
               </p>

@@ -1,12 +1,7 @@
 import project1 from "../../../assets/screencapture-the-language-space-154db-web-app-2023-06-16-22_13_00.png";
 import project2 from "../../../assets/toyland-mockup.png";
 import project3 from "../../../assets/arabian-chefs.png";
-import {
-  FaArrowRight,
-  FaExternalLinkAlt,
-  FaGithub,
-  FaLink,
-} from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Projects = () => {

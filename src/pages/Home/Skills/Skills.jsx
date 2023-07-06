@@ -8,7 +8,7 @@ import photoshop from "../../../assets/adobe-photoshop.svg";
 const Skills = () => {
   return (
     <div className="mt-20">
-      <p className="font-light text-2xl text-center">Areas of expertise</p>
+      <p className="font-light text-2xl text-center text-neutral-800">Areas of expertise</p>
       <div className="w-3/4 lg:w-full mx-auto mt-5 lg:mt-10 flex justify-center items-center gap-3 lg:gap-5">
         {/* html */}
         <svg

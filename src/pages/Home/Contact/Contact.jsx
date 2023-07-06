@@ -162,7 +162,7 @@ const Contact = () => {
               <div className="mt-4">
                 <button
                   type="submit"
-                  className="inline-block w-full rounded-3xl bg-black px-5 py-3 font-medium text-white sm:w-auto"
+                  className="inline-block w-full rounded-3xl bg-neutral-800 hover:bg-opacity-90 px-5 py-3 font-medium text-white sm:w-auto"
                 >
                   Let&apos;s talk
                 </button>

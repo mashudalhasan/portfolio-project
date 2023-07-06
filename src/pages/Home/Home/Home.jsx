@@ -1,5 +1,5 @@
 import photo from "../../../assets/IMG_4263.png";
-import { FaCircle, FaCode } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import code from "../../../assets/coding.jpg";
 import iphone from "../../../assets/Iphone Website Mockup.png";
 import { useState } from "react";
@@ -23,18 +23,26 @@ const Home = () => {
           <span className="font-normal">outstanding</span> websites.
         </p>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-28">
-          <div className="bg-slate-100 rounded-3xl lg:w-2/5 h-full">
+          <div className="bg-gray-50 rounded-3xl lg:w-2/5 h-full">
             <div className="pl-12 pr-24 py-10 h-[660px]">
               <div className="h-16 w-16 flex justify-center items-center bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full">
                 <img className="p-4" src={photo} alt="" />
               </div>
-              <h2 className="mt-4 text-xl">Mashud Al Hasan</h2>
-              <p className="tracking-wide">Full Stack Developer</p>
-              <p className="text-sm text-lime-700">
-                <FaCircle className="inline-flex h-1 w-1 " /> Available
+              <h2 className="tracking-tight mt-4 text-xl text-neutral-800">
+                Mashud Al Hasan
+              </h2>
+              <p className="tracking-tight text-neutral-500">
+                Full Stack Developer
+              </p>
+              <p className="flex justify-start items-center gap-2 text-sm text-lime-700">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
+                </span>{" "}
+                Available
               </p>
               <div className="mt-20">
-                <p className="font-light text-2xl">
+                <p className="tracking-tight font-light text-2xl text-neutral-600">
                   I help peoples through building websites, with a focus on{" "}
                   <span className="font-normal">simplicity</span>,{" "}
                   <span className="font-normal">sophistication</span>, and{" "}

@@ -4,11 +4,19 @@ import query from "../../../assets/react-query.svg";
 import next from "../../../assets/nextjs-icon.svg";
 import vercel from "../../../assets/logo-vercel.svg";
 import photoshop from "../../../assets/adobe-photoshop.svg";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <div className="mt-20">
-      <p className="font-light text-2xl text-center text-neutral-800">Areas of expertise</p>
+    <motion.div
+      initial={{ opacity: 0, translateY: "20%" }}
+      whileInView={{ opacity: 1, translateY: "0%" }}
+      transition={{ duration: 1.5 }}
+      className="mt-20"
+    >
+      <p className="font-light text-2xl text-center text-neutral-800">
+        Areas of expertise
+      </p>
       <div className="w-3/4 lg:w-full mx-auto mt-5 lg:mt-10 flex justify-center items-center gap-3 lg:gap-5">
         {/* html */}
         <svg
@@ -715,7 +723,7 @@ const Skills = () => {
           ></path>
         </svg>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

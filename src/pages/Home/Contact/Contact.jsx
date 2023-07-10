@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef();
@@ -25,16 +26,22 @@ const Contact = () => {
   };
 
   return (
-    <div className="mt-20" id="contact">
+    <motion.div
+      initial={{ opacity: 0, translateY: "20%" }}
+      whileInView={{ opacity: 1, translateY: "0%" }}
+      transition={{ duration: 2 }}
+      className="mt-20"
+      id="contact"
+    >
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
             <p className="max-w-xl text-4xl font-light">Contact me</p>
 
             <div className="mt-8">
-              <a href="" className="text-2xl font-bold text-gray-600">
+              <p className="text-2xl font-bold text-neutral-600">
                 +880 182 099 4433
-              </a>
+              </p>
 
               <address className="mt-2 not-italic">Dhaka, Bangladesh</address>
             </div>
@@ -106,9 +113,7 @@ const Contact = () => {
           <div className="rounded-3xl bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
-                <label className="sr-only">
-                  Name
-                </label>
+                <label className="sr-only">Name</label>
                 <input
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
                   placeholder="Name*"
@@ -120,9 +125,7 @@ const Contact = () => {
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="sr-only">
-                    Email
-                  </label>
+                  <label className="sr-only">Email</label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                     placeholder="Email address*"
@@ -133,9 +136,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="sr-only">
-                    Phone
-                  </label>
+                  <label className="sr-only">Phone</label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                     placeholder="Phone Number"
@@ -146,9 +147,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="sr-only">
-                  Message
-                </label>
+                <label className="sr-only">Message</label>
 
                 <textarea
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
@@ -171,7 +170,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

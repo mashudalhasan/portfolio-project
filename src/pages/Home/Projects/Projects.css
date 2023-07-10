@@ -1,0 +1,11 @@
+.bg-color-1 {
+  background: linear-gradient(to right, rgb(255 237 213), rgb(251 207 232));
+}
+
+.bg-color-2 {
+  background: linear-gradient(to right, rgb(254 242 242), rgb(238 242 255));
+}
+
+.bg-color-3 {
+  background: linear-gradient(to right, rgb(220 252 231), rgb(186 230 253));
+}

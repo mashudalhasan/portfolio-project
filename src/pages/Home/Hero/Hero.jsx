@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import photo from "../../../assets/IMG_4263.png";
+import photo from "../../../assets/Social Profile Picture.png";
 import { FaCode } from "react-icons/fa";
 import code from "../../../assets/coding.jpg";
 import iphone from "../../../assets/Iphone Website Mockup.png";
@@ -108,8 +108,8 @@ const Hero = () => {
           className="bg-neutral-50 rounded-3xl lg:w-2/5 h-full"
         >
           <div className="pl-12 pr-16 lg:pr-24 py-10 h-[560px] lg:h-[660px]">
-            <div className="h-16 w-16 flex justify-center items-center bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full">
-              <img className="p-4" src={photo} alt="" />
+            <div className="h-16 w-16 flex justify-center items-center rounded-full">
+              <img className="rounded-full" src={photo} alt="" />
             </div>
             <h2 className="tracking-tight mt-4 text-xl text-neutral-800">
               Mashud Al Hasan

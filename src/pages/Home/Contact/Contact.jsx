@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
@@ -18,9 +19,12 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result);
+          e.target.reset();
+          toast.success("Message Sent Successfully!");
         },
         (error) => {
           console.log(error.text);
+          toast.error(error.text + "🔥");
         }
       );
   };
